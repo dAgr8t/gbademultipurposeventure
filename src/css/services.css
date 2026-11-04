@@ -1,0 +1,102 @@
+/* Service pages (tractor + haulage): service rows and image band */
+
+.service-intro {
+  display: grid;
+  grid-template-columns: 1fr 0.7fr;
+  gap: 60px;
+  align-items: end;
+}
+
+.service-list {
+  margin-top: 55px;
+  border-top: 1px solid var(--line);
+}
+
+.service-row {
+  display: grid;
+  grid-template-columns: 70px 1fr 40px;
+  gap: 22px;
+  align-items: center;
+  padding: 23px 0;
+  border-bottom: 1px solid var(--line);
+  transition:
+    padding 0.3s var(--ease),
+    background 0.3s;
+}
+
+.service-row:hover {
+  padding-left: 14px;
+  background: linear-gradient(90deg, rgba(217, 154, 24, 0.08), transparent);
+}
+
+.service-row .n {
+  font:
+    800 0.82rem Manrope,
+    sans-serif;
+  color: var(--gold);
+}
+
+.service-row h3 {
+  font:
+    700 clamp(1rem, 1.8vw, 1.25rem) Manrope,
+    sans-serif;
+  margin: 0;
+}
+
+.service-row p {
+  font-size: 0.87rem;
+  color: var(--muted);
+  margin: 4px 0 0;
+}
+
+.service-row .arr {
+  font-size: 1.35rem;
+  color: var(--blue);
+  transition: transform 0.3s;
+}
+
+.service-row:hover .arr {
+  transform: translateX(5px);
+  color: var(--gold);
+}
+
+.service-image-band {
+  min-height: 400px;
+  background:
+    linear-gradient(90deg, rgba(6, 26, 67, 0.8), rgba(6, 26, 67, 0.12)),
+    url("../assets/images/tractor-africa.jpg") center/cover;
+  display: flex;
+  align-items: flex-end;
+  color: #fff;
+  padding: 50px 0;
+}
+
+.service-image-band h2 {
+  font:
+    800 clamp(2.3rem, 5vw, 4.7rem)/1 Manrope,
+    sans-serif;
+  letter-spacing: -0.06em;
+  max-width: 760px;
+  margin: 0;
+}
+
+@media (max-width: 760px) {
+  .service-intro {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .service-row {
+    grid-template-columns: 40px 1fr 25px;
+    gap: 13px;
+    padding: 20px 0;
+  }
+
+  .service-row p {
+    font-size: 0.82rem;
+  }
+
+  .service-image-band {
+    min-height: 350px;
+  }
+}

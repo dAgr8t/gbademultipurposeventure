@@ -1,0 +1,12 @@
+/* Entry point. esbuild bundles these into dist/css/styles.css.
+   Order matters: later files win ties, same as the original single file. */
+@import "./base.css";
+@import "./buttons.css";
+@import "./header.css";
+@import "./home.css";
+@import "./components.css";
+@import "./about.css";
+@import "./services.css";
+@import "./contact.css";
+@import "./footer.css";
+@import "./effects.css";

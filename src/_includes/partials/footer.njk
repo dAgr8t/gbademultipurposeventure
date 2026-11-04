@@ -1,0 +1,31 @@
+<footer class="footer">
+  <div class="container">
+    <div class="footer-main">
+      <div>
+        <a class="footer-brand" href="index.html"><img src="{{ site.logo }}" alt=""></a>
+        <p class="footer-intro">{{ site.footerIntro }}</p>
+        <a class="text-link" href="{{ site.quoteHref }}">Start an enquiry <span>↗</span></a>
+      </div>
+      <div>
+        <h3>Explore</h3>
+        <div class="footer-links">
+          {%- for item in site.nav %}
+          <a href="{{ item.href }}">{{ item.footerLabel }}</a>
+          {%- endfor %}
+        </div>
+      </div>
+      <div>
+        <h3>Company details</h3>
+        <div class="footer-links">
+          <p>{{ site.cac }}</p>
+          <p>{{ site.address }}</p>
+          <p>{{ site.tagline }}</p>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span data-current-year></span> <strong>{{ site.name }}</strong>. All rights reserved.</span>
+      <span>{{ site.footerServices }}</span>
+    </div>
+  </div>
+</footer>

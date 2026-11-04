@@ -1,0 +1,220 @@
+/* Site header and navigation (shared on every page) */
+
+.site-header {
+  height: 88px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(8, 43, 112, 0.08);
+}
+
+.nav-wrap {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 26px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 220px;
+}
+
+.brand img {
+  width: 100px;
+  height: auto;
+  object-fit: contain;
+}
+
+.brand-copy {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.12;
+}
+
+.brand-copy strong {
+  font:
+    800 0.88rem Manrope,
+    sans-serif;
+  letter-spacing: 0.01em;
+  color: var(--blue);
+}
+
+.brand-copy small {
+  font-size: 0.57rem;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+  color: var(--gold);
+  margin-top: 6px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: clamp(16px, 2.2vw, 30px);
+}
+
+.nav-links a {
+  font-size: 0.77rem;
+  font-weight: 700;
+  color: #26344c;
+  position: relative;
+  padding: 9px 0;
+}
+
+.nav-links .mobile-quote {
+  display: none;
+}
+
+.nav-links a:after {
+  content: "";
+  position: absolute;
+  bottom: 2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--gold);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s;
+}
+
+.nav-links a:hover:after,
+.nav-links a.active:after {
+  transform: scaleX(1);
+}
+
+.nav-quote {
+  min-height: 46px;
+  padding: 0 17px;
+  font-size: 0.75rem;
+}
+
+.menu-toggle {
+  display: none;
+  border: 0;
+  background: var(--blue);
+  color: #fff;
+  width: 46px;
+  height: 46px;
+  font-size: 1.35rem;
+  cursor: pointer;
+}
+
+@media (max-width: 1000px) {
+  .nav-links {
+    gap: 15px;
+  }
+
+  .nav-links a {
+    font-size: 0.72rem;
+  }
+
+  .brand {
+    min-width: auto;
+  }
+
+  .brand-copy strong {
+    font-size: 0.77rem;
+  }
+
+  .nav-quote {
+    display: none;
+  }
+}
+
+@media (max-width: 760px) {
+  .site-header {
+    height: 76px;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    background: #fff;
+  }
+
+  .brand img {
+    width: 100px;
+    height: auto;
+  }
+
+  .brand-copy strong {
+    font-size: 0.76rem;
+  }
+
+  .brand-copy small {
+    font-size: 0.5rem;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 76px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--navy);
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    gap: 0;
+    padding: 25px 28px 45px;
+    transform: translateX(100%);
+    visibility: hidden;
+    transition:
+      transform 0.38s var(--ease),
+      visibility 0.38s;
+    color: #fff;
+    overflow: auto;
+  }
+
+  .nav-links.open {
+    transform: translateX(0);
+    visibility: visible;
+  }
+
+  .nav-links a {
+    font:
+      700 1.18rem Manrope,
+      sans-serif;
+    color: #fff;
+    padding: 19px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+  }
+
+  .nav-links a:after {
+    display: none;
+  }
+
+  .nav-links a.active {
+    color: var(--gold-light);
+  }
+
+  .nav-links .mobile-quote {
+    display: block;
+    margin-top: 24px;
+    text-align: center;
+    background: var(--gold);
+    color: var(--navy);
+    border: 0;
+    padding: 16px;
+  }
+}
+
+@media (max-width: 420px) {
+  .brand-copy strong {
+    font-size: 0.68rem;
+  }
+
+  .brand-copy small {
+    letter-spacing: 0.08em;
+    font-size: 0.45rem;
+  }
+}

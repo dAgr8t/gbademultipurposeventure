@@ -1,0 +1,91 @@
+/* Buttons and text links */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  min-height: 54px;
+  padding: 0 23px;
+  border: 1px solid transparent;
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.025em;
+  transition:
+    transform 0.35s var(--ease),
+    background 0.35s,
+    color 0.35s,
+    border-color 0.35s;
+  cursor: pointer;
+}
+
+.btn span {
+  font-size: 1.15rem;
+  transition: transform 0.35s;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+}
+
+.btn:hover span {
+  transform: translateX(4px);
+}
+
+.btn-gold {
+  background: var(--gold);
+  color: var(--navy);
+}
+
+.btn-gold:hover {
+  background: var(--gold-light);
+}
+
+.btn-blue {
+  background: var(--blue);
+  color: #fff;
+}
+
+.btn-blue:hover {
+  background: var(--navy);
+}
+
+.btn-outline {
+  border-color: rgba(255, 255, 255, 0.55);
+  color: #fff;
+}
+
+.btn-outline:hover {
+  background: #fff;
+  color: var(--blue);
+}
+
+.btn-outline-dark {
+  border-color: var(--line);
+  color: var(--blue);
+}
+
+.btn-outline-dark:hover {
+  background: var(--blue);
+  color: #fff;
+}
+
+.text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.text-link span {
+  color: var(--gold);
+  font-size: 1.15rem;
+  transition: transform 0.3s;
+}
+
+.text-link:hover span {
+  transform: translateX(6px);
+}

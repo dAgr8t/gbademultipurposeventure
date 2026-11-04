@@ -1,0 +1,78 @@
+---
+title: "Contact / Request a Quote"
+description: "Contact Gbolagade Multipurpose Ventures or submit a frontend quote enquiry for tractor services, trucking,
+tipping and construction haulage."
+---
+<section class="page-hero" style="--page-image:url('../assets/images/Tracking-1.jpg')">
+    <div class="container">
+        <div class="crumbs"><a href="index.html">Home</a> / Contact</div>
+        <div class="eyebrow">Contact / Request a quote</div>
+        <h1>Tell us about<br><em>the work ahead.</em></h1>
+        <p>Share the service you need, the job location and a short description. This form is currently a frontend
+            prototype and is not connected to a submission service.</p>
+    </div>
+</section>
+<section class="section" id="contact-details">
+    <div class="container contact-grid">
+        <aside class="contact-panel reveal">
+            <div class="eyebrow">Company details</div>
+            <h2>Gbolagade Multipurpose Ventures</h2>
+            <div class="contact-detail"><small>CAC registration number</small>
+                <p>7375636</p>
+            </div>
+            <div class="contact-detail"><small>Office address</small>
+                <p>Kilometer 6 Lagos-Ibadan Expressway, Tollgate, Ibadan, Lead City Road.</p>
+            </div>
+            <div class="contact-detail"><small>Company motto</small>
+                <p>“Agriculture, Haulage and General Supply for a Better Tomorrow”</p>
+            </div>
+            <div class="contact-detail"><small>Phone</small>
+                <p class="placeholder">[Company phone number to be supplied]</p>
+            </div>
+            <div class="contact-detail"><small>WhatsApp</small>
+                <p class="placeholder">[Verified WhatsApp number to be supplied]</p>
+            </div>
+            <p class="form-note" style="color:rgba(255,255,255,.6)">Contact placeholders are intentional and should be
+                replaced with details confirmed by the client.</p>
+        </aside>
+        <div class="form-panel reveal delay-1" id="quote-form-wrap">
+            <h2>Request a quote</h2>
+            <p>Provide enough detail for the team to understand the type and location of the work.</p>
+            <form id="quote-form" novalidate>
+                <div class="form-grid">
+                    <div class="field"><label for="name">Full name *</label><input id="name" name="name"
+                            autocomplete="name" placeholder="Your name" required minlength="2"></div>
+                    <div class="field"><label for="phone">Phone number *</label><input id="phone" name="phone"
+                            type="tel" autocomplete="tel" placeholder="Your contact number" required minlength="7">
+                    </div>
+                    <div class="field"><label for="division">Service division *</label><select id="division"
+                            name="division" required>
+                            <option value="">Choose a service division</option>
+                            <option value="tractor">Tractor & farm land preparation</option>
+                            <option value="truck">Trucking, tipping & construction haulage</option>
+                        </select></div>
+                    <div class="field"><label for="location">Job location *</label><input id="location" name="location"
+                            placeholder="Town, area or site address" required minlength="3"></div>
+                    <div class="field full"><label for="job">Job description *</label><textarea id="job" name="job"
+                            placeholder="Describe the service, materials, land or site requirements..." required
+                            minlength="10"></textarea></div>
+                    <div class="field full"><button class="btn btn-blue" type="submit">Check Enquiry Details
+                            <span>↗</span></button></div>
+                </div>
+                <div class="form-status" id="form-status" aria-live="polite"></div>
+                <p class="form-note">* Required fields. Prototype only: no data is sent, stored or emailed. Connect a
+                    secure form endpoint before launch.</p>
+            </form>
+        </div>
+    </div>
+</section>
+<section class="cta-band">
+    <div class="container cta-inner">
+        <div>
+            <h2>Know which service you need?</h2>
+            <p>Go straight to the relevant service list before sending an enquiry.</p>
+        </div>
+        <div style="display:flex;gap:12px;flex-wrap:wrap"><a class="btn" href="tractor-services.html">Tractor Services
+                <span>↗</span></a><a class="btn" href="haulage-services.html">Haulage Services <span>↗</span></a></div>
+    </div>
+</section>

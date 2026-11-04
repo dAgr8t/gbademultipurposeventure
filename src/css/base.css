@@ -1,0 +1,157 @@
+/* Base: design tokens, reset, typography, layout helpers, reveal/progress effects */
+
+:root {
+  --blue: #082b70;
+  --blue-2: #0d3b8d;
+  --navy: #061a43;
+  --gold: #d99a18;
+  --gold-light: #f2c15a;
+  --white: #fff;
+  --paper: #f5f5f2;
+  --ink: #14213a;
+  --muted: #687386;
+  --line: rgba(8, 43, 112, 0.15);
+  --container: 1200px;
+  --ease: cubic-bezier(0.2, 0.75, 0.25, 1);
+  --shadow: 0 24px 70px rgba(6, 26, 67, 0.14);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
+body {
+  margin: 0;
+  background: var(--white);
+  color: var(--ink);
+  font-family: "DM Sans", sans-serif;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+body.menu-open {
+  overflow: hidden;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+::selection {
+  background: var(--gold);
+  color: var(--navy);
+}
+
+.container {
+  width: min(var(--container), calc(100% - 48px));
+  margin-inline: auto;
+}
+
+.eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--gold);
+  font-size: 0.73rem;
+  font-weight: 800;
+  letter-spacing: 0.19em;
+  text-transform: uppercase;
+}
+
+.eyebrow:before {
+  content: "";
+  width: 34px;
+  height: 2px;
+  background: currentColor;
+}
+
+.eyebrow.blue {
+  color: var(--blue);
+}
+
+.display {
+  font-family: Manrope, sans-serif;
+  font-size: clamp(2.6rem, 6vw, 5.6rem);
+  font-weight: 800;
+  line-height: 0.99;
+  letter-spacing: -0.065em;
+  margin: 18px 0 24px;
+}
+
+.display em {
+  font-style: normal;
+  color: var(--gold);
+}
+
+.section-title {
+  font-family: Manrope, sans-serif;
+  font-size: clamp(2.1rem, 4vw, 3.7rem);
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -0.055em;
+  margin: 14px 0 22px;
+}
+
+.lead {
+  font-size: clamp(1rem, 1.5vw, 1.16rem);
+  color: var(--muted);
+  max-width: 620px;
+}
+
+.section {
+  padding: 112px 0;
+}
+
+.section-sm {
+  padding: 76px 0;
+}
+
+@media (max-width: 1000px) {
+  .section {
+    padding: 86px 0;
+  }
+}
+
+@media (max-width: 760px) {
+  .container {
+    width: min(100% - 34px, var(--container));
+  }
+
+  .section {
+    padding: 76px 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

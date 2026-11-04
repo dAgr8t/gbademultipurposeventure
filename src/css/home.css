@@ -1,0 +1,449 @@
+/* Home page: hero, ticker, division cards, "why us" section */
+
+.hero {
+  position: relative;
+  min-height: min(790px, calc(100svh - 88px));
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background: var(--navy);
+  color: #fff;
+  isolation: isolate;
+}
+
+.hero:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(3, 18, 49, 0.95) 0%,
+      rgba(4, 24, 62, 0.82) 43%,
+      rgba(4, 24, 62, 0.15) 100%
+    ),
+    url("../assets/images/Tracking-1.jpg") center 52% / cover;
+  animation: heroImage 1.5s var(--ease) both;
+  transform-origin: center;
+}
+
+.hero:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  right: -12vw;
+  bottom: -34vw;
+  width: 70vw;
+  height: 70vw;
+  border: 1px solid rgba(217, 154, 24, 0.34);
+  border-radius: 50%;
+  box-shadow:
+    0 0 0 70px rgba(217, 154, 24, 0.035),
+    0 0 0 140px rgba(217, 154, 24, 0.025);
+}
+
+.hero-content {
+  padding: 80px 0 112px;
+  max-width: auto;
+  position: relative;
+}
+
+.hero .eyebrow {
+  color: var(--gold-light);
+}
+
+.hero h1 {
+  font:
+    800 clamp(2.4rem, 8.4vw, 4.5rem)/0.94 Manrope,
+    sans-serif;
+  letter-spacing: 0.055em;
+  margin: 24px 0 17px;
+  max-width: 850px;
+}
+
+.hero h1 .line {
+  display: block;
+  overflow: hidden;
+  padding-bottom: 0.26em;
+}
+
+.hero h1 .line span {
+  display: block;
+  animation: revealUp 0.9s var(--ease) both;
+}
+
+.hero h1 .line:nth-child(2) span {
+  animation-delay: 0.12s;
+}
+
+.hero h1 .line:nth-child(2) span {
+  animation-delay: 0.24s;
+  color: var(--gold);
+}
+
+.hero-copy {
+  max-width: 540px;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 1.04rem;
+  animation: fadeIn 0.8s 0.45s both;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 13px;
+  margin-top: 34px;
+  animation: fadeIn 0.8s 0.58s both;
+}
+
+.hero-note {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  margin-top: 55px;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.73rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.hero-note:before {
+  content: "";
+  height: 1px;
+  width: 50px;
+  background: var(--gold);
+}
+
+.hero-index {
+  position: absolute;
+  right: 0;
+  bottom: 54px;
+  font:
+    700 0.7rem Manrope,
+    sans-serif;
+  letter-spacing: 0.18em;
+  color: rgba(255, 255, 255, 0.65);
+  writing-mode: vertical-rl;
+}
+
+.hero-index b {
+  color: var(--gold);
+  font-size: 1rem;
+}
+
+.ticker {
+  overflow: hidden;
+  background: var(--gold);
+  color: var(--navy);
+  padding: 14px 0;
+}
+
+.ticker-track {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  width: max-content;
+  animation: marquee 34s linear infinite;
+}
+
+.ticker span {
+  font:
+    800 0.76rem Manrope,
+    sans-serif;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.ticker i {
+  font-style: normal;
+  font-size: 1.15rem;
+}
+
+.intro-grid {
+  display: grid;
+  grid-template-columns: 1fr 0.85fr;
+  gap: clamp(42px, 8vw, 120px);
+  align-items: end;
+}
+
+.intro-copy {
+  padding-bottom: 8px;
+}
+
+.intro-copy p {
+  color: var(--muted);
+  max-width: 570px;
+}
+
+.split-services {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  margin-top: 60px;
+}
+
+.service-feature {
+  min-height: 570px;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background: var(--navy);
+  color: #fff;
+  display: flex;
+  align-items: flex-end;
+  padding: clamp(26px, 4vw, 48px);
+}
+
+.service-feature:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  background-position: center;
+  background-size: cover;
+  transition: transform 0.8s var(--ease);
+}
+
+.service-feature:hover:before {
+  transform: scale(1.055);
+}
+
+.service-feature:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(0deg, rgba(3, 17, 45, 0.95), rgba(3, 17, 45, 0.06) 85%);
+}
+
+.service-feature.tractor:before {
+  background-image: url("../assets/images/Tractor-11.jpg");
+  /* url("https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1400&q=82"); */
+}
+
+.service-feature.trucking:before {
+  background-image: url("../assets/images/Truck-1.jpg");
+}
+
+.feature-number {
+  position: absolute;
+  top: 28px;
+  left: 30px;
+  color: rgba(255, 255, 255, 0.78);
+  font:
+    800 0.72rem Manrope,
+    sans-serif;
+  letter-spacing: 0.16em;
+}
+
+.feature-arrow {
+  position: absolute;
+  top: 24px;
+  right: 26px;
+  width: 50px;
+  height: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  display: grid;
+  place-items: center;
+  font-size: 1.25rem;
+  transition:
+    background 0.3s,
+    color 0.3s,
+    transform 0.3s;
+}
+
+.service-feature:hover .feature-arrow {
+  background: var(--gold);
+  color: var(--navy);
+  border-color: var(--gold);
+  transform: rotate(45deg);
+}
+
+.feature-content .eyebrow {
+  color: var(--gold-light);
+}
+
+.feature-content h3 {
+  font:
+    800 clamp(2rem, 3.4vw, 3.5rem)/1 Manrope,
+    sans-serif;
+  letter-spacing: -0.06em;
+  margin: 15px 0;
+}
+Î .feature-content p {
+  max-width: 440px;
+  color: rgba(255, 255, 255, 0.76);
+  margin-bottom: 23px;
+}
+
+.dark-section {
+  background: var(--navy);
+  color: #fff;
+}
+
+.dark-section .lead {
+  color: rgba(255, 255, 255, 0.66);
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 90px;
+  align-items: start;
+}
+
+.why-visual {
+  min-height: 540px;
+  position: relative;
+  background:
+    linear-gradient(180deg, rgba(6, 26, 67, 0.05), rgba(6, 26, 67, 0.3)),
+    url("../assets/images/Tractor-1111.jpeg") center/cover;
+}
+
+.why-visual:after {
+  content: "CAC REGISTERED";
+  position: absolute;
+  bottom: 22px;
+  left: 22px;
+  background: var(--gold);
+  color: var(--navy);
+  padding: 12px 17px;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+.why-list {
+  margin-top: 35px;
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.why-item {
+  display: grid;
+  grid-template-columns: 54px 1fr;
+  gap: 18px;
+  padding: 24px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.why-item .num {
+  color: var(--gold);
+  font:
+    800 0.8rem Manrope,
+    sans-serif;
+}
+
+.why-item h3 {
+  margin: 0 0 6px;
+  font:
+    700 1.08rem Manrope,
+    sans-serif;
+}
+
+.why-item p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 0.92rem;
+}
+
+@keyframes heroImage {
+  from {
+    transform: scale(1.08);
+    filter: brightness(0.65);
+  }
+  to {
+    transform: scale(1);
+    filter: brightness(1);
+  }
+}
+
+@keyframes marquee {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 1000px) {
+  .why-grid {
+    gap: 45px;
+  }
+}
+
+@media (max-width: 760px) {
+  .hero {
+    min-height: 720px;
+    min-height: calc(100svh - 76px);
+    align-items: center;
+  }
+
+  .hero:before {
+    background-image:
+      linear-gradient(90deg, rgba(3, 18, 49, 0.9), rgba(4, 24, 62, 0.64)),
+      url("../assets/images/Tracking-1.jpg");
+    background-position: 58% center;
+  }
+
+  .hero-content {
+    padding: 75px 0 90px;
+  }
+
+  .hero h1 {
+    font-size: clamp(3.1rem, 13vw, 5.6rem);
+  }
+
+  .hero-copy {
+    font-size: 0.96rem;
+  }
+
+  .hero-index {
+    right: 5px;
+    bottom: 26px;
+  }
+
+  .intro-grid,
+  .why-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .split-services {
+    grid-template-columns: 1fr;
+    margin-top: 38px;
+    gap: 13px;
+  }
+
+  .service-feature {
+    min-height: 480px;
+  }
+
+  .why-visual {
+    min-height: 390px;
+    order: 2;
+  }
+
+  .why-grid > div:first-child {
+    order: 1;
+  }
+}
+
+@media (max-width: 420px) {
+  .hero h1 {
+    font-size: 3rem;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+  }
+
+  .service-feature {
+    min-height: 430px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ticker-track {
+    animation: none;
+  }
+}
