@@ -111,7 +111,7 @@
 }
 
 .whatsapp-float:after {
-  content: "Replace number";
+  content: "Chat with us on WhatsApp";
   position: absolute;
   right: 68px;
   white-space: nowrap;
