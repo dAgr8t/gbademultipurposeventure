@@ -83,7 +83,7 @@
 
   // Replace this placeholder with the client's verified international-format WhatsApp number.
   // Example format only: country code + number, digits only. Do not publish until confirmed.
-  const whatsappNumber = "REPLACE_WITH_VERIFIED_NUMBER";
+  const whatsappNumber = "2347073223360";
   document.querySelectorAll("[data-whatsapp]").forEach((link) => {
     if (/^\d{10,15}$/.test(whatsappNumber)) link.href = `https://wa.me/${whatsappNumber}`;
     else {
