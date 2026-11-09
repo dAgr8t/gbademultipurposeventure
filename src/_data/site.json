@@ -3,31 +3,32 @@
   "shortName": "GBOLAGADE",
   "tagline": "Agriculture, Haulage and General Supply for a Better Tomorrow",
   "themeColor": "#082B70",
-  "logo": "assets/images/gbolagade-logo.png",
+  "logo": "/assets/images/gbolagade-logo.png",
   "cac": "CAC Registration No. 7375636",
   "address": "Kilometer 6 Lagos-Ibadan Expressway, Tollgate, Ibadan, Lead City Road.",
   "footerIntro": "Agriculture, Haulage and General Supply for a Better Tomorrow. Supporting land preparation and construction-material movement from one connected team.",
   "footerServices": "Land preparation · Trucking · Tipping · General supply",
-  "quoteHref": "contact.html#quote-form",
+  "quoteHref": "/contact/#quote-form",
+
   "nav": [
-    { "href": "index.html", "label": "Home", "footerLabel": "Home" },
+    { "href": "/", "label": "Home", "footerLabel": "Home" },
     {
-      "href": "about.html",
+      "href": "/about/",
       "label": "About Us",
       "footerLabel": "About the company"
     },
     {
-      "href": "tractor-services.html",
+      "href": "/tractor-services/",
       "label": "Tractor Services",
       "footerLabel": "Tractor & farm preparation"
     },
     {
-      "href": "haulage-services.html",
+      "href": "/haulage-services/",
       "label": "Trucking & Tipping",
       "footerLabel": "Trucking & tipping"
     },
     {
-      "href": "contact.html",
+      "href": "/contact/",
       "label": "Contact",
       "footerLabel": "Contact / Request a quote"
     }

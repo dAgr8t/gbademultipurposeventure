@@ -1,4 +1,4 @@
 {
   "layout": "layouts/base.njk",
-  "permalink": "{{ page.filePathStem | replace('/pages/', '') }}.html"
+  "permalink": "{% if page.fileSlug == 'index' or page.filePathStem == '/pages/index' %}index.html{% else %}{{ page.fileSlug }}/index.html{% endif %}"
 }

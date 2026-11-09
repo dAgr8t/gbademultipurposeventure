@@ -1,13 +1,13 @@
 <header class="site-header">
   <div class="container nav-wrap">
-    <a class="brand" href="index.html" aria-label="{{ site.name }} home">
+    <a class="brand" href="href=" /"" aria-label="{{ site.name }} home">
       <img src="{{ site.logo }}" alt="{{ site.name }} logo">
 
     </a>
     <nav class="nav-links" id="primary-navigation" aria-label="Main navigation">
       {%- for item in site.nav %}
-      <a href="{{ item.href }}" {% if item.href==(page.filePathStem | replace('/pages/', '' )) + '.html' %}
-        class="active" aria-current="page" {% endif %}>{{ item.label }}</a>
+      <a href="{{ item.href }}" {% if item.href==page.url %} class="active" aria-current="page" {% endif %}>{{
+        item.label }}</a>
       {%- endfor %}
       <a class="mobile-quote" href="{{ site.quoteHref }}">Request a Quote ↗</a>
     </nav>
