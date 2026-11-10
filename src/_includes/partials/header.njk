@@ -6,7 +6,7 @@
     </a>
     <nav class="nav-links" id="primary-navigation" aria-label="Main navigation">
       {%- for item in site.nav %}
-      <a href="{{ item.href }}" {% if item.href==page.url %} class="active" aria-current="page" {% endif %}>{{
+      <a href="{{ item.href }}" {% if item.href=page.url %} class="active" aria-current="page" {% endif %}>{{
         item.label }}</a>
       {%- endfor %}
       <a class="mobile-quote" href="{{ site.quoteHref }}">Request a Quote ↗</a>
